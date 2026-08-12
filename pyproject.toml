@@ -23,3 +23,7 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff.lint]
+# BLE001: Allow blind exception catches — monitoring tool must be resilient
+ignore = ["BLE001"]
