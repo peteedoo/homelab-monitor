@@ -1,0 +1,13 @@
+#!/bin/sh
+# Run ruff check on staged Python files
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+echo "Running ruff check..."
+ruff check src/
+if [ $? -ne 0 ]; then
+  echo "ruff check failed — fix issues before committing"
+  exit 1
+fi
+echo "Pre-commit checks passed."
