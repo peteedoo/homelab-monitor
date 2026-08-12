@@ -5,8 +5,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from pathlib import Path
-from typing import Any
 
 from .config import get_thresholds, load_config
 from .format import format_table

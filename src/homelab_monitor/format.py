@@ -8,7 +8,7 @@ from rich.console import Console
 from rich.table import Table
 
 
-def _bytes_to_human(n: int) -> str:
+def _bytes_to_human(n: float) -> str:
     """Convert bytes to a human-readable string."""
     for unit in ("B", "KiB", "MiB", "GiB", "TiB"):
         if abs(n) < 1024.0:
