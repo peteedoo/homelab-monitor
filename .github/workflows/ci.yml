@@ -45,7 +45,7 @@ jobs:
       - name: Test with pytest
         run: pytest --cov=homelab_monitor --cov-report=xml
       - name: Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v7
         with:
           file: ./coverage.xml
           fail_ci_if_error: false
