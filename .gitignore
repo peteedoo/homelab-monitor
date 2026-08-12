@@ -68,3 +68,6 @@ venv.bak/
 # OS
 .DS_Store
 Thumbs.db
+
+# promote
+.promote.conf
